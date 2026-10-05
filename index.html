@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projeto de automação para triagem de e-mails corporativos utilizando IA." />
+  <meta name="keywords" content="Automação, E-mails, IA, Triagem, Outlook, Suporte Técnico" />
+  <meta name="author" content="Leonardo Rezende" />
+  <title>Automação de Triagem de E-mails</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <div class="page">
+    <header class="hero">
+      <span class="badge">Projeto de automação</span>
+      <h1>Automação de triagem de e-mails corporativos</h1>
+      <p>Fluxo inteligente para classificar mensagens, responder dúvidas frequentes e direcionar casos críticos para o suporte técnico.</p>
+    </header>
+
+    <main class="content">
+      <section class="card">
+        <h2>1. Gatilho e entrada de dados</h2>
+        <p><strong>Receber e-mails:</strong> o fluxo é iniciado automaticamente assim que uma nova mensagem chega na caixa de entrada corporativa do Outlook.</p>
+      </section>
+
+      <section class="card">
+        <h2>2. Tratamento técnico do conteúdo</h2>
+        <p><strong>Conversor HTML para texto:</strong> o corpo do e-mail recebido passa por um processo que remove as tags HTML e extrai apenas o texto puro, deixando o conteúdo pronto para análise.</p>
+      </section>
+
+      <section class="card">
+        <h2>3. Triagem com IA (Grok)</h2>
+        <p><strong>Interpretação da intenção:</strong> o texto extraído é enviado ao modelo Grok, que analisa a mensagem e classifica em três caminhos:</p>
+        <ul>
+          <li><strong>Informativo:</strong> comunicado, aviso ou agradecimento sem demanda técnica.</li>
+          <li><strong>Ajuda / dúvida:</strong> solicitação recorrente ou assunto com resposta rápida.</li>
+          <li><strong>Suporte presencial / nível 2:</strong> problema crítico ou demanda técnica direta do time de TI.</li>
+        </ul>
+      </section>
+
+      <section class="card routes">
+        <h2>4. Rotas e execução das ações</h2>
+
+        <div class="route">
+          <h3>Rota 1: Informativo</h3>
+          <p><strong>Ação no Outlook:</strong> a mensagem é movida para uma pasta específica de arquivo ou processamento encerrado.</p>
+          <p><strong>Fim do fluxo:</strong> o ciclo da mensagem é finalizado.</p>
+          <button type="button" class="route-button" data-page="rota1.html">Abrir rota 1</button>
+        </div>
+
+        <div class="route">
+          <h3>Rota 2: Necessidade de presença / TI direto</h3>
+          <p><strong>Ação no Outlook:</strong> e-mails categorizados como críticos são encaminhados para a caixa de entrada do time de suporte de TI para atendimento manual.</p>
+          <button type="button" class="route-button" data-page="rota2.html">Abrir rota 2</button>
+        </div>
+
+        <div class="route">
+          <h3>Rota 3: Consulta de FAQ (ajuda)</h3>
+          <p><strong>Integração via tools:</strong> a IA consulta uma base de conhecimento em planilha de FAQ.</p>
+          <p><strong>Verificação no FAQ:</strong> o Grok avalia se a dúvida corresponde a uma solução cadastrada.</p>
+          <div class="decision">
+            <p><strong>Se SIM:</strong> o sistema gera uma resposta automática, envia ao usuário e encerra o fluxo.</p>
+            <p><strong>Se NÃO:</strong> a mensagem é encaminhada para a equipe humana do suporte de TI.</p>
+          </div>
+          <a  type="button" class="route-button" data-page="rota3.html">Abrir rota 3</button>
+        </div>
+      </section>
+
+      <section class="card image-card">
+        <h2>Fluxograma</h2>
+        <img class="imagem" src="img/fluxograma.proj.jpeg" alt="Fluxograma da automação" />
+      </section>
+
+      <section class="card thank-you">
+        <h2>Agradecimento</h2>
+        <p><strong>Obrigado pela atenção!</strong></p>
+        <p>Agradecemos pela atenção e pelo interesse em conhecer o projeto de Automação de Triagem de E-mails Corporativos.</p>
+        <p>Esperamos que a apresentação tenha demonstrado de forma clara como a automação e a inteligência artificial podem contribuir para organizar as solicitações, responder dúvidas frequentes e direcionar corretamente os casos que necessitam de suporte técnico.</p>
+        <p>O projeto busca tornar o processo de atendimento mais ágil, organizado e eficiente, permitindo que cada mensagem siga o fluxo adequado de acordo com sua necessidade.</p>
+        <p>Obrigado pela atenção e pela participação!</p>
+        <p class="tags">💻 Automação • 🤖 Inteligência Artificial • 📧 Suporte de TI</p>
+      </section>
+    </main>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
